@@ -7,7 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		178D85CA288A742B0078E7A4 /* File2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178D85C9288A742B0078E7A4 /* File2.swift */; };
 		B143EA862834DD420047EB62 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B143EA852834DD420047EB62 /* main.m */; };
+		B143EA8F2834F5960047EB62 /* test1.m in Sources */ = {isa = PBXBuildFile; fileRef = B143EA8E2834F5960047EB62 /* test1.m */; };
+		B143EA9328350A2B0047EB62 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = B143EA9228350A2B0047EB62 /* File.swift */; };
+		B19F8884283F5B5500D0A372 /* test2.m in Sources */ = {isa = PBXBuildFile; fileRef = B19F8883283F5B5500D0A372 /* test2.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -23,8 +27,15 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		178D85C9288A742B0078E7A4 /* File2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File2.swift; sourceTree = "<group>"; };
 		B143EA822834DD420047EB62 /* testcaculater */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = testcaculater; sourceTree = BUILT_PRODUCTS_DIR; };
 		B143EA852834DD420047EB62 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B143EA8D2834F5960047EB62 /* test1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = test1.h; sourceTree = "<group>"; };
+		B143EA8E2834F5960047EB62 /* test1.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = test1.m; sourceTree = "<group>"; };
+		B143EA9128350A2B0047EB62 /* testcaculater-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "testcaculater-Bridging-Header.h"; sourceTree = "<group>"; };
+		B143EA9228350A2B0047EB62 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		B19F8882283F5B5500D0A372 /* test2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = test2.h; sourceTree = "<group>"; };
+		B19F8883283F5B5500D0A372 /* test2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = test2.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +69,13 @@
 			isa = PBXGroup;
 			children = (
 				B143EA852834DD420047EB62 /* main.m */,
+				B143EA8D2834F5960047EB62 /* test1.h */,
+				B143EA8E2834F5960047EB62 /* test1.m */,
+				B19F8882283F5B5500D0A372 /* test2.h */,
+				B19F8883283F5B5500D0A372 /* test2.m */,
+				B143EA9228350A2B0047EB62 /* File.swift */,
+				178D85C9288A742B0078E7A4 /* File2.swift */,
+				B143EA9128350A2B0047EB62 /* testcaculater-Bridging-Header.h */,
 			);
 			path = testcaculater;
 			sourceTree = "<group>";
@@ -92,6 +110,7 @@
 				TargetAttributes = {
 					B143EA812834DD420047EB62 = {
 						CreatedOnToolsVersion = 12.4;
+						LastSwiftMigration = 1240;
 					};
 				};
 			};
@@ -118,7 +137,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B19F8884283F5B5500D0A372 /* test2.m in Sources */,
 				B143EA862834DD420047EB62 /* main.m in Sources */,
+				B143EA9328350A2B0047EB62 /* File.swift in Sources */,
+				B143EA8F2834F5960047EB62 /* test1.m in Sources */,
+				178D85CA288A742B0078E7A4 /* File2.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,16 +262,38 @@
 		B143EA8A2834DD420047EB62 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				LD_GENERATE_MAP_FILE = YES;
+				LD_MAP_FILE_PATH = "$(TARGET_TEMP_DIR)/$(PRODUCT_NAME)-LinkMap-$(CURRENT_VARIANT)-$(CURRENT_ARCH).txt";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "testcaculater/testcaculater-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
 		B143EA8B2834DD420047EB62 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				LD_GENERATE_MAP_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "testcaculater/testcaculater-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
