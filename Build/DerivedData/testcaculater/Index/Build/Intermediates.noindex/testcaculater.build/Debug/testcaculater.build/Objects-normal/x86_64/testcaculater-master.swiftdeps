@@ -1,0 +1,6 @@
+version: "Apple Swift version 5.5.2 (swiftlang-1300.0.47.5 clang-1300.0.29.30)"
+options: "c1855fbcc56184a7542962054275d86ae7867eb8aa042b8164da339420539b70"
+build_start_time: [1656645631, 555768966]
+build_end_time: [1656645631, 940269947]
+inputs:
+  "/Users/chaoyang/Desktop/testcaculater/testcaculater/File.swift": [1656645631, 382626295]
